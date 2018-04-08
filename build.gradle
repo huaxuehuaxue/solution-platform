@@ -1,0 +1,34 @@
+/**
+ * @function : 各个子项目（模块）进行通用配置，避免在每个模块中重复配置。
+ * @author   : chenyuqg@hotmail.com
+ */
+
+subprojects{
+	apply plugin: 'java'
+	apply plugin: 'idea'
+
+	group = 'com.h3c.solution'
+	version = '0.0.1-SNAPSHOT'
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+
+	repositories {
+		maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+		mavenCentral()
+	}
+
+	dependencies {
+	}
+	sourceSets{
+		main{
+			resources{
+				srcDirs=['src/main/resources', 'src/main/java']
+			}
+		}
+	}
+
+	tasks.withType(JavaCompile) {
+		options.encoding = 'UTF-8'
+	}
+
+}

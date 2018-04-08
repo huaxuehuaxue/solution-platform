@@ -1,0 +1,11 @@
+/**
+ * 加入需要的smm-dao和smm-util包
+ * 用到了 @Service 和 @Autowired ，所以需要引入spring-context
+ */
+dependencies {
+	compile project(':sp-db')
+	compile project(':sp-util')
+
+	compile ("org.springframework:spring-context:5.0.0.RELEASE")
+
+}

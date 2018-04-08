@@ -1,0 +1,9 @@
+/**
+ * @function : dao作为数据层的实体类
+ * @author   : chenyuqg@hotmail.com
+ * @statement: 使用了“@Component”注解,所以这里引用了spring-context
+ */
+
+dependencies {
+	compile "org.springframework:spring-context:5.0.0.RELEASE"
+}
